@@ -1,0 +1,140 @@
+// src/styles/Login.scss
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+// src/styles/Login.scss
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: rgb(7, 38, 194);
+  background: radial-gradient(
+    circle,
+    rgba(7, 38, 194, 1) 0%,
+    rgba(4, 2, 6, 1) 100%
+  );
+
+  .login-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+    }
+
+    .password-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      // input {
+      //   width: 100%;
+      //   padding-right: 40px; /* Space for the icon */
+      // }
+
+      .toggle-password {
+        position: absolute;
+        right: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #999;
+
+        &:hover {
+          color: #555;
+        }
+      }
+    }
+
+    form {
+      .form-group {
+        margin-bottom: 1.5rem;
+        text-align: left;
+
+        label {
+          display: block;
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: #374151;
+          margin-bottom: 0.5rem;
+        }
+
+        input {
+          width: 98%;
+          padding: 0.8rem;
+          border: 1px solid #d1d5db;
+          border-radius: 6px;
+          font-size: 0.9rem;
+          color: #374151;
+          outline: none;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+          }
+        }
+
+        .error-message {
+          font-size: 0.8rem;
+          color: #ef4444;
+          margin-top: 0.5rem;
+        }
+      }
+
+      button {
+        width: 40%;
+        padding: 0.5rem;
+        background: #3b82f6;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-right: 0px;
+
+        &:hover {
+          background: #2563eb;
+        }
+      }
+    }
+    p {
+      margin-top: 10px;
+      margin-right: 20px;
+      text-align: center;
+    }
+
+    .forgot-password {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #192233;
+      text-decoration: none;
+
+      &:hover {
+        color: #1e3a8a;
+        text-decoration: underline;
+      }
+    }
+  }
+}
